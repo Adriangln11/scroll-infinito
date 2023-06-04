@@ -1,11 +1,10 @@
 const containerElement = document.getElementById('gifContainer')
 const targetElement = document.getElementById('gifElement')
 const options = {
-    root: document.querySelector('#scrollArea'),
-    rootMargin: '0px',
-    threshold: 1.0
+    
+    threshold: 0.5
 }
-let url = `https://api.giphy.com/v1/gifs/trending?api_key=7TJ92ylHZaHrj3tpcGi0m79i2eFGD1Q7&limit=20&rating=g`
+let url = `https://api.giphy.com/v1/gifs/trending?api_key=7TJ92ylHZaHrj3tpcGi0m79i2eFGD1Q7&limit=50&rating=g`
 let loading = false
 const handleIntersect = ([entry]) => {
     if (!loading && url && entry.isIntersecting) {
@@ -20,7 +19,6 @@ const createElement = item => {
 }
 const render = data => {
     data.forEach(item => containerElement.appendChild(createElement(item)))
-    console.log('rendering...')
 }
 const request = async() => {
     const res = await fetch(url)
