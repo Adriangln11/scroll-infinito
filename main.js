@@ -4,7 +4,7 @@ const options = {
     
     threshold: 0.5
 }
-let url = `https://api.giphy.com/v1/gifs/trending?api_key=7TJ92ylHZaHrj3tpcGi0m79i2eFGD1Q7&limit=50&rating=g`
+let url = `https://api.giphy.com/v1/gifs/trending?api_key=7TJ92ylHZaHrj3tpcGi0m79i2eFGD1Q7&limit=5&rating=g`
 let loading = false
 const handleIntersect = ([entry]) => {
     if (!loading && url && entry.isIntersecting) {
