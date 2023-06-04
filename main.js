@@ -20,6 +20,7 @@ const createElement = item => {
 }
 const render = data => {
     data.forEach(item => containerElement.appendChild(createElement(item)))
+    console.log('rendering...')
 }
 const request = async() => {
     const res = await fetch(url)
