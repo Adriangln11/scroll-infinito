@@ -2,7 +2,7 @@ const containerElement = document.getElementById('gifContainer')
 const targetElement = document.getElementById('gifElement')
 const options = {
     
-    threshold: 0.5
+    threshold: 0.1
 }
 let url = `https://api.giphy.com/v1/gifs/trending?api_key=7TJ92ylHZaHrj3tpcGi0m79i2eFGD1Q7&limit=5&rating=g`
 let loading = false
